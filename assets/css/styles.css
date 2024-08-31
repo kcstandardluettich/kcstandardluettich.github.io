@@ -33,6 +33,21 @@ header img {
     height: auto;
 }
 
+/* Navigation-Stile */
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
 /* Footer-Stile */
 footer {
     background-color: #333;
@@ -51,13 +66,19 @@ footer {
     padding: 20px;
 }
 
+/* Stile für Abstände zwischen Abschnitten */
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
 /* Stile für Blogposts */
 .blog-post {
     margin-bottom: 40px;
 }
 
 .blog-post img {
-    max-width: 80%; /* Reduziert die Größe der Bilder auf 80% der Containerbreite */
+    max-width: 100%; /* Das Bild passt sich der Breite des Containers an */
     height: auto;
     display: block;
     margin: 20px auto;
@@ -80,34 +101,4 @@ footer {
 }
 
 .gallery img:hover {
-    transform: scale(1.05); /* Leichtes Vergrößern beim Hover */
-}
-
-/* Links */
-a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    header {
-        padding: 15px;
-    }
-
-    .container {
-        padding: 10px;
-    }
-
-    header img {
-        max-width: 100px;
-    }
-
-    .gallery img {
-        max-width: 150px; /* Kleinere Bilder auf mobilen Geräten */
-    }
-}
+    transform: sca
