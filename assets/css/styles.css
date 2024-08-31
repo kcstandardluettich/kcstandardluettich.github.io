@@ -82,11 +82,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .blog-post img {
     max-width: 100%; /* Das Bild passt sich der Breite des Containers an */
-    width: auto; /* Behält das Seitenverhältnis bei */
+    width: 100%; /* Setzt die Breite des Bildes auf 100% des Containers */
     height: auto; /* Behält das Seitenverhältnis bei */
     display: block; /* Bild wird als Blockelement dargestellt */
-    margin: 0 auto; /* Zentriert das Bild horizontal */
+    margin: 20px auto; /* Zentriert das Bild horizontal und fügt vertikalen Abstand hinzu */
     border-radius: 8px;
+    object-fit: contain; /* Bild wird skaliert, um in den Container zu passen, ohne abgeschnitten zu werden */
 }
 
 /* Stile für die Galerie */
