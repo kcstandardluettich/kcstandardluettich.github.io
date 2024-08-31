@@ -1,57 +1,70 @@
 /* assets/css/styles.css */
 
-/* Allgemeine Stile für das Layout */
+/* Grundlegende Reset-Stile */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Grundlegende Stile für den Body */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Sicherstellen, dass Padding und Border in der Breite enthalten sind */
 }
 
-header, footer {
+/* Header-Stile */
+header {
     background-color: #333;
     color: #fff;
-    padding: 10px;
-}
-
-header {
-    position: fixed;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
     top: 0;
     width: 100%;
     z-index: 1000;
-    display: flex;
-    justify-content: center; /* Zentriert das Logo im Header */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    text-align: center; /* Zentriert den Text im Footer */
-}
-
-/* Logo-Stile */
 header img {
-    max-width: 200px; /* Maximalbreite für das Logo festlegen */
-    height: auto; /* Höhe proportional zur Breite */
+    max-width: 150px;
+    height: auto;
 }
 
-/* Stile für die Blogposts */
-.blog-post {
+/* Footer-Stile */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Container-Stile für den Inhalt */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
     padding: 20px;
-    margin: 60px 0; /* Platz für Fixed Header */
 }
 
-/* Stile für Bilder */
+/* Stile für Blogposts */
+.blog-post {
+    margin-bottom: 40px;
+}
+
 .blog-post img {
-    max-width: 100%; /* Das Bild passt sich der Breite des Containers an */
-    height: auto; /* Die Höhe passt sich proportional zur Breite an */
-    display: block; /* Verhindert zusätzliche Abstände um das Bild */
-    margin: 0 auto; /* Zentriert das Bild innerhalb des Containers */
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
 }
 
-/* Optional: Stil für Links und andere Elemente */
+/* Links */
 a {
     color: #007bff;
     text-decoration: none;
@@ -61,17 +74,17 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Responsive Design für mobile Geräte */
+/* Responsive Design */
 @media (max-width: 768px) {
-    header, footer {
-        text-align: center; /* Zentriert den Text in Header und Footer */
+    header {
+        padding: 15px;
     }
 
-    .content {
-        padding: 10px; /* Weniger Padding auf mobilen Geräten */
+    .container {
+        padding: 10px;
     }
 
     header img {
-        max-width: 150px; /* Kleinere Maximalbreite für mobile Geräte */
+        max-width: 100px;
     }
 }
