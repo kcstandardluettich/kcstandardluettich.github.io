@@ -1,0 +1,6 @@
+title KC Standard Lüttich
+description Die offizielle Website des KC Standard Lüttich Kegelvereins
+baseurl  # Verwende den Repository-Namen, falls diese nicht auf GitHub Pages root level ist
+url https[dein-benutzername].github.iokc-standard-luettich # Füge hier deine GitHub Pages URL ein
+theme minima
+markdown kramdown
