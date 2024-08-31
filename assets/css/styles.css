@@ -57,11 +57,30 @@ footer {
 }
 
 .blog-post img {
-    max-width: 100%;
+    max-width: 80%; /* Reduziert die Größe der Bilder auf 80% der Containerbreite */
     height: auto;
     display: block;
     margin: 20px auto;
     border-radius: 8px;
+}
+
+/* Stile für die Galerie */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; /* Abstand zwischen den Bildern */
+}
+
+.gallery img {
+    max-width: 200px; /* Maximale Breite für Galerie-Bilder */
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s; /* Sanfte Zoom-Animation */
+}
+
+.gallery img:hover {
+    transform: scale(1.05); /* Leichtes Vergrößern beim Hover */
 }
 
 /* Links */
@@ -86,5 +105,9 @@ a:hover {
 
     header img {
         max-width: 100px;
+    }
+
+    .gallery img {
+        max-width: 150px; /* Kleinere Bilder auf mobilen Geräten */
     }
 }

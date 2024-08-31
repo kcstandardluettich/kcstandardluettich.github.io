@@ -1,15 +1,17 @@
 ---
 layout: default
 title: "Mitglieder"
-permalink: /members.html
+permalink: /members/
 ---
 
-<section class="members">
-    <h1>Unsere Mitglieder</h1>
-    <ul>
-        <li>Mitglied 1</li>
-        <li>Mitglied 2</li>
-        <li>Mitglied 3</li>
-        <!-- Füge hier weitere Mitglieder hinzu -->
-    </ul>
-</section>
+# Mitglieder
+
+Hier sind die aktuellen Mitglieder des KC Standard Lüttich:
+
+1. Max Mustermann
+2. Erika Mustermann
+3. Hans Müller
+4. Susanne Schmidt
+5. ... (weitere Mitglieder)
+
+Wir sind stolz auf unsere engagierten Mitglieder, die unseren Verein zu einem großartigen Ort machen!
