@@ -6,6 +6,7 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    box-sizing: border-box; /* Sicherstellen, dass Padding und Border in der Breite enthalten sind */
 }
 
 header, footer {
@@ -33,14 +34,12 @@ footer {
     margin: 60px 0; /* Platz für Fixed Header */
 }
 
+/* Stile für Bilder */
 .blog-post img {
     max-width: 100%; /* Das Bild passt sich der Breite des Containers an */
     height: auto; /* Die Höhe passt sich proportional zur Breite an */
     display: block; /* Verhindert zusätzliche Abstände um das Bild */
     margin: 0 auto; /* Zentriert das Bild innerhalb des Containers */
-    cursor: pointer; /* Zeigt einen Zeiger-Cursor an, um anzuzeigen, dass das Bild klickbar ist */
-    border: 2px solid #ddd; /* Optional: Rahmen um das Bild hinzufügen */
-    border-radius: 8px; /* Optional: Abgerundete Ecken hinzufügen */
 }
 
 /* Optional: Stil für Links und andere Elemente */
@@ -51,4 +50,15 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+/* Responsive Design für mobile Geräte */
+@media (max-width: 768px) {
+    header, footer {
+        text-align: center; /* Zentriert den Text in Header und Footer */
+    }
+
+    .content {
+        padding: 10px; /* Weniger Padding auf mobilen Geräten */
+    }
 }

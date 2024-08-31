@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Paintball spielen"
+title: "Paintball spielen - 17. August 2024"
 date: 2024-08-17
 categories: event
 ---
