@@ -65,6 +65,7 @@ footer {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
+    overflow: hidden; /* Verhindert, dass übergroße Inhalte angezeigt werden */
 }
 
 /* Stile für Abstände zwischen Abschnitten */
@@ -81,9 +82,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .blog-post img {
     max-width: 100%; /* Das Bild passt sich der Breite des Containers an */
-    height: auto;
-    display: inline-block; /* Verhindert, dass das Bild die gesamte Breite einnimmt */
-    margin: 20px 0;
+    width: auto; /* Behält das Seitenverhältnis bei */
+    height: auto; /* Behält das Seitenverhältnis bei */
+    display: block; /* Bild wird als Blockelement dargestellt */
+    margin: 0 auto; /* Zentriert das Bild horizontal */
     border-radius: 8px;
 }
 
