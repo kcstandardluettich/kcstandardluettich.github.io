@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Mitglieder"
-permalink: /members/
+permalink: /members.html
 ---
 
 <section class="members">
