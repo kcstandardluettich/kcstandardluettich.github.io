@@ -13,6 +13,7 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    overflow-x: hidden; /* Verhindert horizontales Scrollen */
 }
 
 /* Header-Stile */
@@ -75,13 +76,14 @@ h1, h2, h3, h4, h5, h6 {
 /* Stile für Blogposts */
 .blog-post {
     margin-bottom: 40px;
+    text-align: center; /* Zentriert den Text und die Bilder im Blogpost */
 }
 
 .blog-post img {
     max-width: 100%; /* Das Bild passt sich der Breite des Containers an */
     height: auto;
-    display: block;
-    margin: 20px auto;
+    display: inline-block; /* Verhindert, dass das Bild die gesamte Breite einnimmt */
+    margin: 20px 0;
     border-radius: 8px;
 }
 
@@ -101,4 +103,34 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .gallery img:hover {
-    transform: sca
+    transform: scale(1.05); /* Leichtes Vergrößern beim Hover */
+}
+
+/* Links */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 15px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    header img {
+        max-width: 100px;
+    }
+
+    .gallery img {
+        max-width: 150px; /* Kleinere Bilder auf mobilen Geräten */
+    }
+}
