@@ -34,11 +34,13 @@ footer {
 }
 
 .blog-post img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    cursor: pointer; /* Zeige einen Zeiger-Cursor an, um anzuzeigen, dass das Bild klickbar ist */
+    max-width: 100%; /* Das Bild passt sich der Breite des Containers an */
+    height: auto; /* Die Höhe passt sich proportional zur Breite an */
+    display: block; /* Verhindert zusätzliche Abstände um das Bild */
+    margin: 0 auto; /* Zentriert das Bild innerhalb des Containers */
+    cursor: pointer; /* Zeigt einen Zeiger-Cursor an, um anzuzeigen, dass das Bild klickbar ist */
+    border: 2px solid #ddd; /* Optional: Rahmen um das Bild hinzufügen */
+    border-radius: 8px; /* Optional: Abgerundete Ecken hinzufügen */
 }
 
 /* Optional: Stil für Links und andere Elemente */
