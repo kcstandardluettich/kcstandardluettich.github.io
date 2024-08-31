@@ -11,4 +11,4 @@ Am 17. August 2024 haben die Mitglieder des KC Standard Lüttich einen spannende
 
 Nach einigen intensiven Runden und viel Gelächter haben wir den Tag mit einem geselligen Beisammensein abgeschlossen. Wir freuen uns schon auf das nächste Abenteuer!
 
-![Gruppenfoto Paintball](../assets/images/paintball-gruppenfoto.jpg)
+![Gruppenfoto Paintball]({{ '/assets/images/paintball-gruppenfoto.jpg' | relative_url }})
