@@ -20,12 +20,21 @@ header {
     top: 0;
     width: 100%;
     z-index: 1000;
+    display: flex;
+    justify-content: center; /* Zentriert das Logo im Header */
 }
 
 footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    text-align: center; /* Zentriert den Text im Footer */
+}
+
+/* Logo-Stile */
+header img {
+    max-width: 200px; /* Maximalbreite für das Logo festlegen */
+    height: auto; /* Höhe proportional zur Breite */
 }
 
 /* Stile für die Blogposts */
@@ -60,5 +69,9 @@ a:hover {
 
     .content {
         padding: 10px; /* Weniger Padding auf mobilen Geräten */
+    }
+
+    header img {
+        max-width: 150px; /* Kleinere Maximalbreite für mobile Geräte */
     }
 }
