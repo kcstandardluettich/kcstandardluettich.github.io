@@ -11,7 +11,7 @@ body {
 header {
     background-color: #333;
     color: #fff;
-    padding: 15px 0; /* Erhöht das Padding für besser sichtbare Schrift */
+    padding: 15px 0;
     text-align: center;
     position: relative; /* Änderung von sticky zu relative */
     z-index: 1000;
@@ -22,14 +22,16 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 10px; /* Reduzierter Abstand zwischen den Navigationselementen */
+    flex-wrap: wrap; /* Ermöglicht Umbruch bei kleinen Bildschirmen */
 }
 
 nav a {
     color: #fff;
     text-decoration: none;
     padding: 10px;
-    font-size: 18px; /* Einheitliche Schriftgröße für Navigation */
+    font-size: 16px; /* Schriftgröße angepasst, um Platz zu sparen */
+    white-space: nowrap; /* Verhindert Umbruch von Navigationstexten */
 }
 
 nav a:hover {
@@ -53,7 +55,7 @@ h1, h2, h3, p {
 /* Logo-Stil */
 .logo {
     max-height: 20vh; /* Logo darf höchstens 20% der Bildschirmhöhe einnehmen */
-    width: auto; /* Breite automatisch, um das Seitenverhältnis zu erhalten */
+    width: auto; /* Beibehaltung des Seitenverhältnisses */
     display: block;
     margin: 0 auto;
 }
@@ -109,7 +111,7 @@ footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 15px 0; /* Erhöht das Padding für besser sichtbare Schrift */
+    padding: 15px 0;
     position: relative; /* Änderung von fixed zu relative */
     width: 100%;
     margin-top: 20px; /* Abstand zum vorherigen Inhalt */
@@ -131,12 +133,13 @@ footer {
     }
 
     nav {
-        flex-direction: column;
+        flex-direction: column; /* Navigationstexten untereinander auf sehr kleinen Bildschirmen */
+        align-items: center; /* Zentriert die Links vertikal */
     }
 
     nav a {
         margin: 5px 0;
-        font-size: 18px; /* Einheitliche Schriftgröße für Navigation auf mobilen Geräten */
+        font-size: 16px; /* Schriftgröße für mobile Geräte */
     }
 
     .logo {
