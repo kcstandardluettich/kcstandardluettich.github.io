@@ -1,139 +1,99 @@
-/* assets/css/styles.css */
-
-/* Grundlegende Reset-Stile */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Grundlegende Stile für den Body */
+/* Allgemeine Stile für den gesamten Körper der Website */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Verhindert horizontales Scrollen */
 }
 
-/* Header-Stile */
+/* Kopfzeilenstile */
 header {
     background-color: #333;
     color: #fff;
-    padding: 20px;
+    padding: 10px 0;
     text-align: center;
     position: sticky;
     top: 0;
-    width: 100%;
     z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-header img {
-    max-width: 150px;
-    height: auto;
-}
-
-/* Navigation-Stile */
+/* Navigationselemente im Header */
 nav {
-    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
 }
 
 nav a {
     color: #fff;
     text-decoration: none;
-    padding: 0 10px;
+    padding: 10px;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Hauptinhalt der Seite */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* Überschrift- und Absatzausrichtung */
+h1, h2, h3, p {
+    margin-bottom: 15px;
+}
+
+/* Stil für nummerierte Listen */
+ol {
+    list-style-type: decimal; /* Standard nummerierte Liste */
+    margin-left: 20px; /* Abstand von der linken Seite */
+    padding-left: 20px; /* Einrückung für nummerierte Listen */
+}
+
+/* Bilder skalieren sich proportional zum Container */
+img {
+    max-width: 100%; /* Bild passt sich der Breite des Containers an */
+    height: auto; /* Höhe passt sich proportional an */
+    display: block; /* Verhindert zusätzliche Abstände durch Inline-Bilder */
+    margin: 0 auto; /* Zentriert das Bild horizontal */
 }
 
 /* Footer-Stile */
 footer {
     background-color: #333;
     color: #fff;
-    padding: 10px;
     text-align: center;
-    position: relative;
-    width: 100%;
+    padding: 10px 0;
+    position: fixed;
     bottom: 0;
+    width: 100%;
 }
 
-/* Container-Stile für den Inhalt */
-.container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    overflow: hidden; /* Verhindert, dass übergroße Inhalte angezeigt werden */
-}
-
-/* Stile für Abstände zwischen Abschnitten */
-h1, h2, h3, h4, h5, h6 {
-    margin-top: 30px;
-    margin-bottom: 20px;
-}
-
-/* Stile für Blogposts */
-.blog-post {
-    margin-bottom: 40px;
-    text-align: center; /* Zentriert den Text und die Bilder im Blogpost */
-}
-
-.blog-post img {
-    max-width: 100%; /* Das Bild passt sich der Breite des Containers an */
-    width: 100%; /* Setzt die Breite des Bildes auf 100% des Containers */
-    height: auto; /* Behält das Seitenverhältnis bei */
-    display: block; /* Bild wird als Blockelement dargestellt */
-    margin: 20px auto; /* Zentriert das Bild horizontal und fügt vertikalen Abstand hinzu */
-    border-radius: 8px;
-    object-fit: contain; /* Bild wird skaliert, um in den Container zu passen, ohne abgeschnitten zu werden */
-}
-
-/* Stile für die Galerie */
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px; /* Abstand zwischen den Bildern */
-}
-
-.gallery img {
-    max-width: 200px; /* Maximale Breite für Galerie-Bilder */
-    height: auto;
-    border-radius: 8px;
-    transition: transform 0.3s; /* Sanfte Zoom-Animation */
-}
-
-.gallery img:hover {
-    transform: scale(1.05); /* Leichtes Vergrößern beim Hover */
-}
-
-/* Links */
-a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    header {
-        padding: 15px;
-    }
-
-    .container {
+/* Mobile Geräte Anpassungen */
+@media screen and (max-width: 600px) {
+    body {
         padding: 10px;
     }
 
-    header img {
-        max-width: 100px;
+    header, footer {
+        padding: 10px;
     }
 
-    .gallery img {
-        max-width: 150px; /* Kleinere Bilder auf mobilen Geräten */
+    main {
+        padding: 10px;
+        margin: 0;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 5px 0;
     }
 }
