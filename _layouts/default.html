@@ -7,12 +7,50 @@
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
 </head>
 <body>
-    {% include header.html %}
+    <!-- Header mit Navigation -->
+    <header>
+        <div class="logo-container">
+            <!-- Logo mit entsprechender Klasse für CSS-Steuerung -->
+            <img src="{{ '/assets/images/kc-logo.jpg' | relative_url }}" alt="KC Standard Lüttich Logo" class="logo">
+        </div>
+        <nav>
+            <a href="{{ '/' | relative_url }}">Home</a>
+            <a href="{{ '/members/' | relative_url }}">Mitglieder</a>
+            <a href="{{ '/gallery/' | relative_url }}">Galerie</a>
+        </nav>
+    </header>
 
-    <div class="container">
+    <!-- Hauptinhalt der Seite -->
+    <main>
         {{ content }}
-    </div>
+    </main>
 
-    {% include footer.html %}
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 KC Standard Lüttich. Alle Rechte vorbehalten.</p>
+    </footer>
+
+    <!-- JavaScript für die Vollbildanzeige der Bilder -->
+    <script>
+        // Vollbildanzeige für alle Bilder außer dem Logo
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('img:not(.logo)');
+            const fullscreenDiv = document.createElement('div');
+            fullscreenDiv.classList.add('fullscreen-img');
+            document.body.appendChild(fullscreenDiv);
+            
+            images.forEach(img => {
+                img.addEventListener('click', function() {
+                    fullscreenDiv.style.display = 'flex';
+                    fullscreenDiv.innerHTML = `<img src="${img.src}" style="max-width: 90%; max-height: 90%;">`;
+                });
+            });
+
+            // Schließen des Vollbilds beim Klicken
+            fullscreenDiv.addEventListener('click', function() {
+                fullscreenDiv.style.display = 'none';
+            });
+        });
+    </script>
 </body>
 </html>
