@@ -25,6 +25,12 @@
         {{ content }}
     </main>
 
+    <!-- Vollbild-Container für Bilder -->
+    <div id="fullscreen-container" class="fullscreen-container">
+        <span class="close-btn">&times;</span>
+        <img id="fullscreen-img" src="" alt="Vollbildanzeige">
+    </div>
+
     <!-- Footer -->
     <footer>
         <p>© 2024 KC Standard Lüttich. Alle Rechte vorbehalten.</p>
@@ -32,23 +38,27 @@
 
     <!-- JavaScript für die Vollbildanzeige der Bilder -->
     <script>
-        // Vollbildanzeige für alle Bilder außer dem Logo
         document.addEventListener('DOMContentLoaded', function() {
             const images = document.querySelectorAll('img:not(.logo)');
-            const fullscreenDiv = document.createElement('div');
-            fullscreenDiv.classList.add('fullscreen-img');
-            document.body.appendChild(fullscreenDiv);
-            
+            const fullscreenContainer = document.getElementById('fullscreen-container');
+            const fullscreenImg = document.getElementById('fullscreen-img');
+            const closeBtn = document.querySelector('.close-btn');
+
             images.forEach(img => {
                 img.addEventListener('click', function() {
-                    fullscreenDiv.style.display = 'flex';
-                    fullscreenDiv.innerHTML = `<img src="${img.src}" style="max-width: 90%; max-height: 90%;">`;
+                    fullscreenContainer.style.display = 'flex';
+                    fullscreenImg.src = img.src;
                 });
             });
 
-            // Schließen des Vollbilds beim Klicken
-            fullscreenDiv.addEventListener('click', function() {
-                fullscreenDiv.style.display = 'none';
+            closeBtn.addEventListener('click', function() {
+                fullscreenContainer.style.display = 'none';
+            });
+
+            fullscreenContainer.addEventListener('click', function(e) {
+                if (e.target === fullscreenContainer || e.target === closeBtn) {
+                    fullscreenContainer.style.display = 'none';
+                }
             });
         });
     </script>
