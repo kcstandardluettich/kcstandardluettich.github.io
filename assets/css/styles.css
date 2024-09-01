@@ -52,8 +52,8 @@ h1, h2, h3, p {
 
 /* Logo-Stil */
 .logo {
-    max-width: 20%; /* Logo soll 20% der Gesamtbreite einnehmen */
-    height: auto; /* Beibehaltung des Seitenverhältnisses */
+    max-height: 20vh; /* Logo darf höchstens 20% der Bildschirmhöhe einnehmen */
+    width: auto; /* Breite automatisch, um das Seitenverhältnis zu erhalten */
     display: block;
     margin: 0 auto;
 }
@@ -140,7 +140,7 @@ footer {
     }
 
     .logo {
-        max-width: 30%; /* Vergrößert das Logo auf mobilen Geräten auf bis zu 30% der Gesamtbreite */
+        max-height: 20vh; /* Vergrößert das Logo auf mobilen Geräten, ohne die Höhe zu überschreiten */
     }
 
     h1, h2, h3, p {
