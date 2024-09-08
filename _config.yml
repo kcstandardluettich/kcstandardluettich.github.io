@@ -4,3 +4,5 @@ baseurl: "" # Verwende den Repository-Namen, falls diese nicht auf GitHub Pages 
 url: "https://kcstandardluettich.github.io/" # Füge hier deine GitHub Pages URL ein
 theme: minima
 markdown: kramdown
+plugins:
+  - jekyll-sitemap
