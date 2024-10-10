@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Startseite"
+title: ""
 ---
 
 <section class="hero">

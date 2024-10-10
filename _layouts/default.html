@@ -3,11 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="google-site-verification" content="nHo1AAVWhAZi_4cU9eDSKcmNo7gAc71MQz1X6bB8f4M" />
-	<meta name="description" content="Offizielle Website des KC Standard Lüttich Kegelvereins. Informationen zu unseren Mitgliedern, Aktivitäten und Veranstaltungen.">
-	<meta name="keywords" content="Kegelverein, KC Standard Lüttich, Kegeln, Mitglieder, Veranstaltungen">
-	<meta name="robots" content="index, follow">
-	<meta name="author" content="KC Standard Lüttich">
+    <meta name="google-site-verification" content="nHo1AAVWhAZi_4cU9eDSKcmNo7gAc71MQz1X6bB8f4M" />
+    <meta name="description" content="Offizielle Website des KC Standard Lüttich Kegelvereins. Informationen zu unseren Mitgliedern, Aktivitäten und Veranstaltungen.">
+    <meta name="keywords" content="Kegelverein, KC Standard Lüttich, Kegeln, Mitglieder, Veranstaltungen">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="KC Standard Lüttich">
+    
+    <!-- Open Graph Meta-Tags -->
+    <meta property="og:title" content="{{ page.title }} | KC Standard Lüttich" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Offizielle Website des KC Standard Lüttich Kegelvereins. Informationen zu unseren Mitgliedern, Aktivitäten und Veranstaltungen." />
+    <meta property="og:image" content="{{ '/assets/images/kc-logo.jpg' | relative_url }}" />
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+    
+    <!-- Twitter Cards Meta-Tags (optional) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ page.title }} | KC Standard Lüttich">
+    <meta name="twitter:description" content="Offizielle Website des KC Standard Lüttich Kegelvereins. Informationen zu unseren Mitgliedern, Aktivitäten und Veranstaltungen.">
+    <meta name="twitter:image" content="{{ '/assets/images/kc-logo.jpg' | relative_url }}">
+
     <title>{{ page.title }} | KC Standard Lüttich</title>
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
 </head>
